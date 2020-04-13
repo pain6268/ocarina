@@ -9,6 +9,6 @@ Run 'pip install colored'
 
 Using:
 Get a program by typing 'ocarina get <program name>'
-change the active repository by typing 'ocarina set-active-repo <repo url> (change back to the offical by typing official in place of the URL.
+change the active repository by typing into cmd (or the nice new windows terminal!) 'ocarina set-active-repo <repo url> (change back to the offical by typing official in place of the URL.
   
   Documantation on setting up repositories will be available here: https://github.com/StonyVista/ocarina-official-repo/
