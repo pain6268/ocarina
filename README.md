@@ -2,8 +2,10 @@
 Experimental linux-like package manager for windows
 
 Installing:
+Get python 3. Make sure this is added to PATH and can be accessed by typing python into CMD
 Place ocarina.py, ocarina_data.py and repo.txt in %userprofile%/ocarina-data
 Place ocarina.bat in system32
+Run 'pip install colored'
 
 Using:
 Get a program by typing 'ocarina get <program name>'
