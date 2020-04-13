@@ -1,0 +1,1 @@
+python %userprofile%\ocarina\ocarina.py %1 %2
