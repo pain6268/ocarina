@@ -105,3 +105,4 @@ def getAppInfoFromRepo(appName,repository):
         print(red255+'Error (1): ocarina has detected you are not running Windows.\nIf you are wanting to test ocarina, please use Windows.'+endcolour)
 
 print(green255+'Thanks for using ocarina!!'+endcolour)
+genFolder('appdata')
