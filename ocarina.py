@@ -3,7 +3,7 @@ import sys
 import ocarina_api
 
 def getRepo():
-    f = open(ocarina_api.getUserDir(True)+'/ocarina/repo.txt','r')
+    f = open(ocarina_api.getUserDir()+'/repo.txt','r')
     repo = f.read()
     f.close()
     return repo
@@ -14,7 +14,7 @@ try:
     elif sys.argv[1] == 'set-active-repo':
         if sys.argv[2] == 'official':
             sys.argv[2] = 'https://raw.githubusercontent.com/StonyVista/ocarina-official-repo/master'
-        f = open(ocarina_api.getUserDir(True)+'/ocarina/repo.txt','w')
+        f = open(ocarina_api.getUserDir()+'/repo.txt','w')
         f.write(sys.argv[2])
         f.close()
     else:

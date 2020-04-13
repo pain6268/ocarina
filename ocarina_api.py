@@ -31,14 +31,11 @@ def dlFile(remoteAddress, localAddress):
     else:
         print(red255+'Error (1): ocarina has detected you are not running Windows.\nIf you are wanting to test ocarina, please use Windows.'+endcolour)
 
-def getUserDir(removeDataString = False):
+def getUserDir():
     baseUserDir = sys.executable.split('\\')[0]+'/Users/'+os.getlogin()
     if os.path.exists(baseUserDir+'/ocarina-data') == False: #/ocarina-data rather than just /ocarina because otherwise it would be likely to conflict with the git repo if it was in the users home folder
         os.mkdir(baseUserDir+'/ocarina-data') #creates C:/Users/*your-user-here*/ocarina-data
-    if removeDataString == True:
-        return baseUserDir
-    else:
-        return baseUserDir+'/ocarina-data'
+    return baseUserDir+'/ocarina-data'
 
 def genFolder(path):
     if os.path.exists(getUserDir()+'/'+path) == False:
@@ -49,7 +46,7 @@ def getAppExecutable(basename, name, type, url): #type is unused for now
     if verifiedSystem == True:
         verify = input(blue255+'Would you like to download '+name+'? (n/Y): '+endcolour)
         if verify.lower() != 'n':
-            appDLLocation = getUserDir()+'/'+genFolder(basename)+'/app.'+url.split('.')[-1]
+            appDLLocation = getUserDir()+'/'+genFolder('appdata/'+basename)+'/app.'+url.split('.')[-1]
             print(blue255+'Now downloading '+name+' from its defined source ('+url+')...'+endcolour)
             dlStatus = dlFile(url,appDLLocation)
             if dlStatus == 1:
@@ -68,7 +65,7 @@ def getAppExecutable(basename, name, type, url): #type is unused for now
 
 def getAppInfoFromRepo(appName,repository):
     if verifiedSystem == True:
-        appDLLocation = getUserDir()+'/'+genFolder(appName)+'/app.ocarina-info'
+        appDLLocation = getUserDir()+'/'+genFolder('appdata/'+appName)+'/app.ocarina-info'
         print(blue255+'Getting info for '+appName+' from the repository...'+endcolour)
         dlStatus = dlFile(repository+'/apps/'+appName+'/app.ocarina-info',appDLLocation) #this line downloads the app info file for the selected app on the active repository
         if dlStatus == 1:
