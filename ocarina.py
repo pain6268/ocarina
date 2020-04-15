@@ -31,7 +31,7 @@ try:
             print(ocarina_api.blue255+'ocarina will now execute the setup file...'+ocarina_api.endcolour)
             ocarina_api.executeSetupFile(sys.argv[2],appExtension)
             verify = input(ocarina_api.blue255+'Do you want to delete the setup file? (n/Y): '+ocarina_api.endcolour)
-            if verify == True:
+            if verify.lower != 'n':
                 ocarina_api.os.remove(ocarina_api.getUserDir()+'/appdata/'+sys.argv[2]+'/app.'+appExtension)
         elif appData[1] == 'prg-zip':
             print(ocarina_api.blue255+'Extracting...'+ocarina_api.endcolour)
