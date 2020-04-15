@@ -46,7 +46,7 @@ try:
         f = open(ocarina_api.getUserDir()+'/repo.txt','w')
         f.write(repo)
         f.close()
-    elif sys.argv[1] = 'launch':
+    elif sys.argv[1] == 'launch':
         print(ocarina_api.blue255+'Launching...'+ocarina_api.endcolour)
         try:
             ocarina_api.executeExe(sys.argv[2],ocarina_api.readDataFromInfoFile(sys.argv[2])[3])
