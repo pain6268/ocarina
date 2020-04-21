@@ -40,7 +40,7 @@ try:
 
     elif sys.argv[1] == 'set-active-repo':
         if sys.argv[2] == 'official':
-            repo = 'https://raw.githubusercontent.com/StonyVista/ocarina-official-repo/master'
+            repo = 'https://raw.githubusercontent.com/SVista01/ocarina-official-repo/master'
         else:
             repo = sys.argv[2]
         f = open(ocarina_api.getUserDir()+'/repo.txt','w')
