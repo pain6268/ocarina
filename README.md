@@ -1,4 +1,7 @@
 # ocarina
+
+The code is hideous
+
 Experimental linux-like package manager for windows
 
 !!If you are trying out alpha 1.0 (get it from the alpha-1 branch) it is reccommended that you switch the repo to: https://raw.githubusercontent.com/SVista01/ocarina-official-repo/alpha1.0-compatible!!
