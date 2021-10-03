@@ -1,4 +1,5 @@
 # ocarina
+Update (October 2021): I won't be updating this anymore. Just use chocolatey or winget like a normal person.
 
 The code is hideous
 
